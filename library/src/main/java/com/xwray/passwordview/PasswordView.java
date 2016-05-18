@@ -80,7 +80,7 @@ public class PasswordView extends EditText {
 
     @Override public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_UP
-                && event.getX() >= (getRight() - getCompoundDrawables()[2].getBounds().width())) {
+                && event.getRawX() >= (getRight() - getCompoundDrawables()[2].getBounds().width())) {
             visible = !visible;
             setup();
             invalidate();
